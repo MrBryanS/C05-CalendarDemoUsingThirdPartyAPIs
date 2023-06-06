@@ -18,15 +18,15 @@ $(function () {
   var currentHour = (dayjs().format('hA'))
   console.log("currentHour is ", currentHour, "It's type is: ", typeof currentHour);
 
+  //place text - "some text" in the 9AM text area
+  
 
  //add a button to save the text in the 09AM text area to local storage
  $('#09AMbutton').on('click', function () {
-  alert('Hello!');
-  var text = $('#09AM'.).val();
-
-
+  var text = $('#09AMtextArea').val();
+  console.log(text);  
   
-  localStorage.setItem('09AM',"text");
+  
 });
 
 
