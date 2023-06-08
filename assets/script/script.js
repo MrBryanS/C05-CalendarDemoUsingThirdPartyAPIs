@@ -9,13 +9,43 @@ $(function () {
 
 
 
+//loop through the time blocks and apply the appropriate class
+//to the time block based on the current time
+var currentHour = dayjs().hour();
+var currentHourText = currentHour.toString();
+console.log(currentHourText, typeof currentHourText);
+//var isCurrentHour = false;
+//var isPastHour = false;
+//var isFutureHour = false;
+//if ("15"==="15") {var isCurrentHour = true };
+//console.log(isCurrentHour, typeof isCurrentHour);
 
 
-//////
+
+
+$(".time-block").each(function () {
+  var timeBlock = $(this).attr("id");
+  console.log(timeBlock,typeof timeBlock);
+
+  if (timeBlock < currentHourText) {
+    $(this).addClass("past");
+  }
+  else if (timeBlock === currentHour) {
+    $(this).addClass("present");
+  }
+  else if (timeBlock > currentHour){
+    $(this).addClass("future");
+  }
+});
+
+  //get the hour from the id
+  
+
+
   var activityList = JSON.parse(localStorage.getItem("scheduledEvents")) || [];
   // how do I populate the text area with the text from local storage?
   activityList.forEach(item => {
-    console.log(item.time);
+    //console.log(item.time);
     //target the time block with the id of the time in the object
     var timeBlock = $("#" + item.time);
     //put the text in the text area
@@ -54,6 +84,6 @@ $(function () {
     localStorage.setItem("scheduledEvents", JSON.stringify(activityList));
   });
 
-
+});
 
 });
