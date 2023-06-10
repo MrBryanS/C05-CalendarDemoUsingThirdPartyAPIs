@@ -36,7 +36,7 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #61caff;
   color: white;
 }
 
@@ -51,9 +51,12 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
-}
+  content: "Click to Save";}
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+
+
