@@ -28,12 +28,16 @@ $(".time-block").each(function () {
   console.log(timeBlock,typeof timeBlock);
 
   if (timeBlock < currentHourText) {
+    console.log("past");
     $(this).addClass("past");
   }
-  else if (timeBlock === currentHour) {
+  else if (timeBlock === currentHourText) {
+    console.log("present");
+
     $(this).addClass("present");
   }
-  else if (timeBlock > currentHour){
+  else if (timeBlock > currentHourtText){
+    console.log("future");
     $(this).addClass("future");
   }
 });
@@ -86,4 +90,4 @@ $(".time-block").each(function () {
 
 });
 
-});
+;
