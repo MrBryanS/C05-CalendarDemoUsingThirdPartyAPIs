@@ -1,6 +1,7 @@
 This application features dymaically updated HTML and CSS using jQuery and the Day.js library (https://day.js.org/) for working with dates and times.
 
 [GitHub Repository](https://github.com/MrBryanS/C05-CalendarDemoUsingThirdPartyAPIs)
+
 [GitHub Live Link](https://mrbryans.github.io/C05-CalendarDemoUsingThirdPartyAPIs/) 
 
 
